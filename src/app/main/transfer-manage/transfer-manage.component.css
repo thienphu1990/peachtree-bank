@@ -1,0 +1,27 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+}
+.transfer-manage-bound{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    padding: 30px 17px;
+}
+.button-submit{
+    display: flex;
+    width: 200px;
+    height: 42px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: none;
+    background-color: rgb(234, 102, 53);
+    border-radius: 5px;
+    align-self: flex-end;
+}

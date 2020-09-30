@@ -1,0 +1,18 @@
+.block-bound{
+    display: flex;
+    width: 100%;
+    background-color: rgb(19, 119, 139);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+.icon{
+    position: absolute;
+    left: 17px;
+    top: 50%;
+    transform: translate(0 ,-50%);
+}

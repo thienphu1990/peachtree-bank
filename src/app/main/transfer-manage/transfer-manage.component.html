@@ -1,0 +1,26 @@
+<app-block-header
+    [icon]="blockObj.icon"
+    [title]="blockObj.title"
+    [blockStyle]="blockObj.blockStyle" >
+</app-block-header> 
+<div class="transfer-manage-bound">
+    <app-input-control 
+        [title]="fromAccountInput.title"
+        [value]="fromAccountInput.value"
+        [type]="fromAccountInput.type"
+        [isDisable]="fromAccountInput.isDisable">
+    </app-input-control>
+    <app-input-control  
+        [title]="toAccountInput.title"
+        [type]="toAccountInput.type"
+        [placeHolder]="toAccountInput.placeHolder"
+        [isDisable]="toAccountInput.isDisable">
+    </app-input-control>
+    <app-input-control  
+        [title]="amountInput.title"
+        [type]="amountInput.type"
+        [placeHolder]="amountInput.placeHolder"
+        [isDisable]="amountInput.isDisable">
+    </app-input-control>
+    <button class="button-submit">SUBMIT</button>
+</div>

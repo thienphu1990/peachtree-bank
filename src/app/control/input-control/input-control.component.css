@@ -23,6 +23,7 @@ input{
     border: none;
     color: rgb(126, 122, 118);
     font-size: 15px;
+    background-color: white;
 }
 input::placeholder{
     color: rgb(192, 192, 192);

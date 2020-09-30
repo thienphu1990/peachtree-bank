@@ -2,7 +2,9 @@
 body{
     margin: 0px;
     width: 100vw;
+    min-width: 1026px;
     height: 100vh;
+    min-height: 600px;
     font-family: 'Kanit', sans-serif;
 }
 p{

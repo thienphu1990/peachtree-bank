@@ -8,6 +8,7 @@
     display: flex;
     color: rgb(0, 0, 0);
     font-size: 14px;
+    font-weight: 400;
     text-transform: uppercase;
 }
 .input-bound{

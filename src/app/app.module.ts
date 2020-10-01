@@ -8,6 +8,7 @@ import { TransferManageComponent } from './main/transfer-manage/transfer-manage.
 import { TransactionHistoryComponent } from './main/transaction-history/transaction-history.component';
 import { BlockHeaderComponent } from './control/block-header/block-header.component';
 import { InputControlComponent } from './control/input-control/input-control.component';
+import { TransactionItemComponent } from './main/transaction-history/transaction-item/transaction-item.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { InputControlComponent } from './control/input-control/input-control.com
     TransferManageComponent,
     TransactionHistoryComponent,
     BlockHeaderComponent,
-    InputControlComponent
+    InputControlComponent,
+    TransactionItemComponent
   ],
   imports: [
     BrowserModule

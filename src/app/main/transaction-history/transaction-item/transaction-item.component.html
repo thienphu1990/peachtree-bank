@@ -1,0 +1,12 @@
+<div class="status"  [ngStyle]="rowStyle"></div>
+<div class="row-bound">
+    <div class="date-create">{{transactionItem.dates.valueDate | date:'MMM. dd'}}</div>
+    <div class="trans-logo">
+        <div class="img-logo"></div>
+    </div>
+    <div class="trans-desc">
+        <p class="merchant-name">{{transactionItem.merchant.name}}</p>
+        <p class="transaction-type">{{transactionItem.transaction.type}}</p>
+    </div>
+    <div class="trans-amount">-${{transactionItem.transaction.amountCurrency.amount}}</div>
+</div>

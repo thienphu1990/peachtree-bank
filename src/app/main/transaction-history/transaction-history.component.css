@@ -4,6 +4,7 @@
     width: 100%;
     height: 100%;
     background-color: rgb(255, 255, 255);
+    overflow: hidden;
 }
 .transaction-history-bound{
     display: flex;
@@ -12,10 +13,17 @@
     background-color: white;
     height: 100%;
     padding: 20px 17px;
+    overflow: hidden;
 }
 .filter-bound{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 30px;
     height: 36px;
+    margin-bottom: 25px;
+}
+.transaction-list{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
 }

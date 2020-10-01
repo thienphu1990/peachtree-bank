@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+//mock
+import { TransactionList } from '../../mock/mock-transaction';
+
 @Component({
   selector: 'app-transaction-history',
   templateUrl: './transaction-history.component.html',
@@ -17,6 +20,8 @@ export class TransactionHistoryComponent implements OnInit {
     placeHolder: "Search by typing...",
     type: "text",
   };
+
+  transactionList = TransactionList;
   constructor() { }
 
   ngOnInit(): void {

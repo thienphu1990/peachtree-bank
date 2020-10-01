@@ -11,4 +11,8 @@
             [type]="searchTransactionInput.type">
         </app-input-control>
     </div>
+    <div class="transaction-list">
+        <app-transaction-item *ngFor="let transaction of transactionList"
+            [transaction]="transaction"></app-transaction-item>
+    </div>
 </div>

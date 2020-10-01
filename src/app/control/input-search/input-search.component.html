@@ -1,0 +1,4 @@
+<div class="input-bound">
+    <input type="text" placeholder="Search by typing..." [ngModel]="searchName" (ngModelChange)="onInputChange($event)"/>
+    <div *ngIf="searchName.length>0" class="clear-btn" (click)="clearSearch()"></div>
+</div>

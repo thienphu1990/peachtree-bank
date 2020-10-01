@@ -16,13 +16,34 @@ export class TransactionHistoryComponent implements OnInit {
       height: "62px"
     }
   };
-  searchTransactionInput={
-    placeHolder: "Search by typing...",
-    type: "text",
-  };
+  sortOptions=[
+    {
+      title: "date",
+      key: "date"
+    },
+    {
+      title: "beneficiary",
+      key: "beneficiary"
+    },
+    {
+      title: "amount",
+      key: "amount"
+    }
+  ]
 
   transactionList = TransactionList;
   constructor() { }
+
+  onSearchChange(value) {
+    if(value.length === 0){
+      this.transactionList = TransactionList;
+    }
+    else{
+      this.transactionList = TransactionList.filter(transaction => 
+        transaction.merchant.name.toLowerCase().includes(value.toLowerCase())
+      )
+    }
+  }
 
   ngOnInit(): void {
   }

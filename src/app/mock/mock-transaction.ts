@@ -14,7 +14,8 @@ export const TransactionList = [
         },
         merchant: {
             name: "Backbase",
-            accountNumber: "SI64397745065188826"
+            accountNumber: "SI64397745065188826",
+            avatar: "assets/icons/backbase.png"
         }
     }, 
     {
@@ -32,7 +33,8 @@ export const TransactionList = [
         },
         merchant: {
             name: "The Tea Lounge",
-            accountNumber: "SI64397745065188826"
+            accountNumber: "SI64397745065188826",
+            avatar: "assets/icons/the-tea-lounge.png"
         }
     }, 
     {
@@ -50,7 +52,8 @@ export const TransactionList = [
         },
         merchant: {
             name: "Texaco",
-            accountNumber: "SI64397745065188826"
+            accountNumber: "SI64397745065188826",
+            avatar: "assets/icons/texaco.png"
         }
     }, 
     {
@@ -68,7 +71,8 @@ export const TransactionList = [
         },
         merchant: {
             name: "The Tea Lounge",
-            accountNumber: "SI64397745065188826"
+            accountNumber: "SI64397745065188826",
+            avatar: "assets/icons/the-tea-lounge.png"
         }
     }, 
     {
@@ -86,7 +90,8 @@ export const TransactionList = [
         },
         merchant: {
             name: "Amazon Online Store",
-            accountNumber: "SI64397745065188826"
+            accountNumber: "SI64397745065188826",
+            avatar: "assets/icons/amazon-online-store.png"
         }
     }, 
     {
@@ -104,7 +109,8 @@ export const TransactionList = [
         },
         merchant: {
             name: "7-Eleven",
-            accountNumber: "SI64397745065188826"
+            accountNumber: "SI64397745065188826",
+            avatar: "assets/icons/7-eleven.png"
         }
     }, 
     {
@@ -121,7 +127,8 @@ export const TransactionList = [
         },
         merchant: {
             name: "H&M Online Store",
-            accountNumber: "SI64397745065188826"
+            accountNumber: "SI64397745065188826",
+            avatar: "assets/icons/h&m-online-store.png"
         }
     }, 
     {
@@ -139,7 +146,8 @@ export const TransactionList = [
         },
         merchant: {
             name: "Jerry Hildreth",
-            accountNumber: "SI64397745065188826"
+            accountNumber: "SI64397745065188826",
+            avatar: "assets/icons/jerry-hildreth.png"
         }
     }, 
     {
@@ -157,7 +165,8 @@ export const TransactionList = [
         },
         merchant: {
             name: "Lawrence Pearson",
-            accountNumber: "SI64397745065188826"
+            accountNumber: "SI64397745065188826",
+            avatar: "assets/icons/lawrence-pearson.png"
         }
     }, 
     {
@@ -175,7 +184,8 @@ export const TransactionList = [
         },
         merchant: {
             name: "Whole Foods",
-            accountNumber: "SI64397745065188826"
+            accountNumber: "SI64397745065188826",
+            avatar: "assets/icons/whole-foods.png"
         }
     }, 
     {
@@ -193,7 +203,8 @@ export const TransactionList = [
         },
         merchant: {
             name: "Southern Electric Company",
-            accountNumber: "SI64397745065188826"
+            accountNumber: "SI64397745065188826",
+            avatar: "assets/icons/southern-electric-company.png"
         }
     }
 ]

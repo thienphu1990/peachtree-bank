@@ -6,10 +6,15 @@
 </app-block-header>
 <div class="transaction-history-bound">
     <div class="filter-bound">
-        <app-input-control 
-            [placeHolder]="searchTransactionInput.placeHolder"
-            [type]="searchTransactionInput.type">
-        </app-input-control>
+        <app-input-search
+            (onSearchChange)="onSearchChange($event)"></app-input-search>
+        <div class="sort-by">
+            <p class="p-sort-by">Sort by</p>
+            <div class="sort-content">
+                <app-sort-button *ngFor="let option of sortOptions"
+                    [title]="option.title"></app-sort-button>
+            </div>
+        </div>
     </div>
     <div class="transaction-list">
         <app-transaction-item *ngFor="let transaction of transactionList"

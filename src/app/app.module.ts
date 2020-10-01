@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -9,6 +10,8 @@ import { TransactionHistoryComponent } from './main/transaction-history/transact
 import { BlockHeaderComponent } from './control/block-header/block-header.component';
 import { InputControlComponent } from './control/input-control/input-control.component';
 import { TransactionItemComponent } from './main/transaction-history/transaction-item/transaction-item.component';
+import { SortButtonComponent } from './control/sort-button/sort-button.component';
+import { InputSearchComponent } from './control/input-search/input-search.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +22,13 @@ import { TransactionItemComponent } from './main/transaction-history/transaction
     TransactionHistoryComponent,
     BlockHeaderComponent,
     InputControlComponent,
-    TransactionItemComponent
+    TransactionItemComponent,
+    SortButtonComponent,
+    InputSearchComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

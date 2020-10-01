@@ -12,7 +12,6 @@ export class TransactionItemComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log(changes)
     if(changes?.transactionItem){
       switch(changes?.transactionItem?.currentValue?.merchant?.name){
         case "The Tea Lounge":
@@ -48,7 +47,7 @@ export class TransactionItemComponent implements OnInit, OnChanges {
           break;
         default:
           this.rowStyle = {
-            backgroundColor: 'rgb(25, 154, 118)'
+            backgroundColor: 'rgb(21, 116, 158)'
           }
           break;
 

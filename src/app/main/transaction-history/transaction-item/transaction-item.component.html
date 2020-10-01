@@ -2,7 +2,8 @@
 <div class="row-bound">
     <div class="date-create">{{transactionItem.dates.valueDate | date:'MMM. dd'}}</div>
     <div class="trans-logo">
-        <div class="img-logo"></div>
+        <img *ngIf="transactionItem.merchant?.avatar" class="img-avatar" src="{{transactionItem.merchant?.avatar}}" alt="avatar" />
+        <div *ngIf="!transactionItem.merchant?.avatar" class="img-empty"></div>
     </div>
     <div class="trans-desc">
         <p class="merchant-name">{{transactionItem.merchant.name}}</p>

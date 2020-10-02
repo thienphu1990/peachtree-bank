@@ -1,4 +1,6 @@
 <div id="user-view">
-    <app-transfer-manage></app-transfer-manage>
-    <app-transaction-history></app-transaction-history>
+    <app-transfer-manage
+        (onTransfer)="onTransfer($event)"></app-transfer-manage>
+    <app-transaction-history
+        [transactions]="transactionList"></app-transaction-history>
 </div>

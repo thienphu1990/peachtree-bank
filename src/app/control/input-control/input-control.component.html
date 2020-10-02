@@ -1,4 +1,12 @@
 <p class="input-title">{{inputTitle | uppercase}}</p>
 <div class="input-bound">
-    <input value="{{inputValue}}" placeholder="{{inputPlaceHolder}}" type="{{inputType}}" disabled="{{inputIsDisable}}"/>
+    <p *ngIf="inputType==='currency'" class="p-currency" 
+        [style.color]="inputValue&&inputValue.length>0?'black':'rgb(192, 192, 192)'">$</p>
+    <input 
+        placeholder="{{inputPlaceHolder}}" 
+        id="{{inputKey}}"
+        [attr.type]="inputType==='currency' ? 'number':'text'"
+        [attr.disabled]="inputIsDisable ? '':null"
+        [ngClass]="inputType==='currency' ? 'input-currency' : 'input-text'"  
+        [(ngModel)]="inputValue" (ngModelChange)="onChange($event)"/>
 </div>

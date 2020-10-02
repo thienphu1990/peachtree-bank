@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-transfer-manage',
@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./transfer-manage.component.css']
 })
 export class TransferManageComponent implements OnInit {
+  @Output() onTransfer = new EventEmitter()
+  
+  ownerAccount = {
+    username: 'Owner Account(4692)',
+    amount: 50000
+  }
   blockObj={
     icon: "assets/icons/arrows.png",
     title: "Make a Transfer",
@@ -15,25 +21,42 @@ export class TransferManageComponent implements OnInit {
   };
   fromAccountInput={
     title: "from account",
-    value: "Free Checking(4692) - $5824.76",
+    value: `${this.ownerAccount.username} - $${this.ownerAccount.amount}`,
     type: "text",
     isDisable: true
   };
-  toAccountInput={
-    title: "to account",
-    value: "",
-    type: "text",
-    placeHolder: "Type to account",
-    isDisable: false
-  };
-  amountInput={
-    title: "amount",
-    value: "",
-    type: "text",
-    placeHolder: "$ 0.00",
-    isDisable: false
-  };
+  toAccountValue="";
+  amountValue="";
+  transfer = {
+    toAccount: '',
+    amount: 0
+  }
   constructor() { }
+
+  onChangeToAccount(value) {
+    this.transfer.toAccount = value
+  }
+
+  onChangeAmount(value) {
+    this.transfer.amount = value
+  }
+
+  onSubmit() {
+    if(!this.transfer) return
+    this.ownerAccount.amount = this.ownerAccount.amount - this.transfer.amount
+    this.fromAccountInput.value = `${this.ownerAccount.username} - $${this.ownerAccount.amount}`
+    this.onTransfer.emit({toAccount: this.transfer.toAccount, amount: this.transfer.amount})
+    this.clear()
+  }
+
+  clear() {
+    this.toAccountValue = ""
+    this.amountValue = ""
+    this.transfer={
+      toAccount: '',
+      amount: 0
+    }
+  }
 
   ngOnInit(): void {
   }

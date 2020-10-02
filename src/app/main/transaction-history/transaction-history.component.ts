@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
-//mock
-import { TransactionList } from '../../mock/mock-transaction';
 //interface
 import { Sort } from '../../interface/sort'
 
@@ -10,7 +8,9 @@ import { Sort } from '../../interface/sort'
   templateUrl: './transaction-history.component.html',
   styleUrls: ['./transaction-history.component.css']
 })
-export class TransactionHistoryComponent implements OnInit {
+export class TransactionHistoryComponent implements OnInit, OnChanges {
+  @Input('transactions') transactions;
+  
   blockObj={
     icon: "assets/icons/briefcase.png",
     title: "Recent Transactions",
@@ -18,7 +18,7 @@ export class TransactionHistoryComponent implements OnInit {
       height: "62px"
     }
   };
-  
+  transactionList = []
   sortOptions: Sort[]=[
     {
       title: "date",
@@ -33,22 +33,30 @@ export class TransactionHistoryComponent implements OnInit {
       key: "amount"
     }
   ]
-  
-  transactionList = TransactionList;
+
   sortType = 0
   sortSelected: Sort = this.sortOptions[0]
   
   constructor() { }
 
+  ngOnChanges(changes: SimpleChanges) {
+    console.log(changes.transactions.currentValue.length, this.transactions.length)
+    if(changes.transactions.currentValue.length !== this.transactions.length){
+      this.transactionList = changes.transactions.currentValue
+      console.log(this.transactionList)
+    }
+  }
+
   onSearchChange(value) {
     if(value.length === 0){
-      this.transactionList = TransactionList;
+      this.transactionList = this.transactions;
     }
     else{
-      this.transactionList = TransactionList.filter(transaction => 
+      this.transactionList = this.transactions.filter(transaction => 
         transaction.merchant.name.toLowerCase().includes(value.toLowerCase())
       )
     }
+    this.checkSort()
   }
 
   onClickSortButton(value: Sort) {
@@ -123,6 +131,7 @@ export class TransactionHistoryComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.transactionList = this.transactions
     this.checkSort()
   }
 

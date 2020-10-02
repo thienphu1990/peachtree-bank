@@ -12,7 +12,10 @@
             <p class="p-sort-by">Sort by</p>
             <div class="sort-content">
                 <app-sort-button *ngFor="let option of sortOptions"
-                    [title]="option.title"></app-sort-button>
+                    [sort]="option"
+                    [sortSelected]="sortSelected"
+                    [sortType]="sortType"
+                    (onClickSortButton)="onClickSortButton($event)"></app-sort-button>
             </div>
         </div>
     </div>

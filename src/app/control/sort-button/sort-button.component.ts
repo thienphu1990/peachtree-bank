@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Sort } from '../../interface/sort'
 
 @Component({
   selector: 'app-sort-button',
@@ -6,9 +7,18 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./sort-button.component.css']
 })
 export class SortButtonComponent implements OnInit {
-  @Input('title') title:string
-  isActive = true
+  @Input() sort:Sort
+  @Input('sortType') sortType: number
+  @Input('sortSelected') sortSelected: Sort
+  @Output() onClickSortButton = new EventEmitter()
+
+  isActive = false
+
   constructor() { }
+
+  onClick() {
+    this.onClickSortButton.emit(this.sort)
+  }
 
   ngOnInit(): void {
   }

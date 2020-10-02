@@ -3,11 +3,12 @@
     height: 34px;
     align-items: center;
     justify-content: center;
-    padding: 0 20px;
+    padding: 0 29px 0 20px;
     border-left: 1px solid rgb(202, 197, 192);
     border-top: 1px solid rgb(202, 197, 192);
     border-bottom: 1px solid rgb(202, 197, 192);
     cursor: pointer;
+    position: relative;
 }
 :host:last-child{
     border-right: 1px solid rgb(202, 197, 192);
@@ -20,7 +21,22 @@
     width: 0;
     height: 0;
     margin-left: 5px;
+    position: absolute;
+    top: 50%;
+    right: 17px;
+    transform: translate(0, -50%);
+}
+
+.down{
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
     border-top: 7px solid rgb(144, 144, 144);
+    border-bottom: none;
+}
+
+.up{
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 7px solid rgb(144, 144, 144);
+    border-top: none;
 }

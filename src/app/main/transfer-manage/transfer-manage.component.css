@@ -71,11 +71,7 @@ input[type=number] {
 input::placeholder{
     color: rgb(192, 192, 192);
 }
-.input-text{
-
-}
 .input-currency{
-    
     padding-left: 10px;
 }
 .input-currency::-webkit-outer-spin-button,

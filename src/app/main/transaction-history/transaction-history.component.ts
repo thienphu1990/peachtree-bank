@@ -92,6 +92,7 @@ export class TransactionHistoryComponent implements OnInit, OnChanges {
   }
 
   sortDate() {
+    if(!this.transactionList) return
     this.transactionList.sort((a,b) => {
       let dateA = new Date(a.dates.valueDate).getTime()
       if(isNaN(dateA)){

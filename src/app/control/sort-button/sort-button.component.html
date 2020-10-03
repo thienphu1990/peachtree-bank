@@ -1,4 +1,4 @@
 <div class="sort-btn" (click)="onClick()">
-    <p class="sort-title">{{sort.title | uppercase}}</p>
-    <div *ngIf="sortSelected.key === sort.key" [ngClass]="sortType === 0 ? 'ic-sort down' : 'ic-sort up'"></div>
+    <p class="sort-title">{{sort && sort.title | uppercase}}</p>
+    <div *ngIf="sort&&sortSelected.key === sort.key" [ngClass]="sortType === 0 ? 'ic-sort down' : 'ic-sort up'"></div>
 </div>

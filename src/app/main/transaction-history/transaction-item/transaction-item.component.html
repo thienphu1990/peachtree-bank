@@ -1,13 +1,13 @@
 <div class="status"  [ngStyle]="rowStyle"></div>
 <div class="row-bound">
-    <div class="date-create">{{transactionItem.dates.valueDate | date:'MMM. dd'}}</div>
+    <div class="date-create">{{transactionItem?.dates?.valueDate | date:'MMM. dd'}}</div>
     <div class="trans-logo">
-        <img *ngIf="transactionItem.merchant?.avatar" class="img-avatar" src="{{transactionItem.merchant?.avatar}}" alt="avatar" />
-        <div *ngIf="!transactionItem.merchant?.avatar" class="img-empty"></div>
+        <img *ngIf="transactionItem?.merchant?.avatar" class="img-avatar" src="{{transactionItem?.merchant?.avatar}}" alt="avatar" />
+        <div *ngIf="!transactionItem?.merchant?.avatar" class="img-empty"></div>
     </div>
     <div class="trans-desc">
-        <p class="merchant-name">{{transactionItem.merchant.name}}</p>
-        <p class="transaction-type">{{transactionItem.transaction.type}}</p>
+        <p class="merchant-name">{{transactionItem?.merchant?.name}}</p>
+        <p class="transaction-type">{{transactionItem?.transaction?.type}}</p>
     </div>
-    <div class="trans-amount">-${{transactionItem.transaction.amountCurrency.amount}}</div>
+    <div class="trans-amount">-${{transactionItem?.transaction?.amountCurrency?.amount}}</div>
 </div>

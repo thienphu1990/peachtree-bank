@@ -35,19 +35,21 @@ export class TransactionHistoryComponent implements OnInit, OnChanges {
   ]
 
   sortType = 0
+  searchKey = ""
   sortSelected: Sort = this.sortOptions[0]
   
   constructor() { }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log(changes.transactions.currentValue.length, this.transactions.length)
-    if(changes.transactions.currentValue.length !== this.transactions.length){
-      this.transactionList = changes.transactions.currentValue
-      console.log(this.transactionList)
-    }
+    console.log(changes)
+    // if(changes.transactions.currentValue.length !== this.transactions.length){
+    //   this.transactionList = changes.transactions.currentValue
+    //   this.onSearchChange(this.onSearchChange(this.searchKey))
+    // }
   }
 
   onSearchChange(value) {
+    this.searchKey = value
     if(value.length === 0){
       this.transactionList = this.transactions;
     }

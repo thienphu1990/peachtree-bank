@@ -8,7 +8,6 @@ import { MainComponent } from './main/main.component';
 import { TransferManageComponent } from './main/transfer-manage/transfer-manage.component';
 import { TransactionHistoryComponent } from './main/transaction-history/transaction-history.component';
 import { BlockHeaderComponent } from './control/block-header/block-header.component';
-import { InputControlComponent } from './control/input-control/input-control.component';
 import { TransactionItemComponent } from './main/transaction-history/transaction-item/transaction-item.component';
 import { SortButtonComponent } from './control/sort-button/sort-button.component';
 import { InputSearchComponent } from './control/input-search/input-search.component';
@@ -21,7 +20,6 @@ import { InputSearchComponent } from './control/input-search/input-search.compon
     TransferManageComponent,
     TransactionHistoryComponent,
     BlockHeaderComponent,
-    InputControlComponent,
     TransactionItemComponent,
     SortButtonComponent,
     InputSearchComponent

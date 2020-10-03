@@ -9,7 +9,7 @@ import { TransactionList } from '../mock/mock-transaction';
   styleUrls: ['./main.component.css'],
 })
 export class MainComponent implements OnInit {
-  transactionList = TransactionList
+  transactions = TransactionList
   constructor() { }
 
   makeid(length) {
@@ -23,7 +23,7 @@ export class MainComponent implements OnInit {
   }
 
   onTransfer(value) {
-    this.transactionList.unshift({
+    this.transactions.unshift({
       categoryCode: `#${this.makeid(6)}`,
       dates: {
           valueDate: new Date().getTime().toString()
@@ -41,7 +41,6 @@ export class MainComponent implements OnInit {
           avatar: ""
       }
     })
-    console.log(value)
   }
 
   ngOnInit(): void {

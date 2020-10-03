@@ -43,6 +43,11 @@ export class TransferManageComponent implements OnInit {
 
   onSubmit() {
     if(!this.transfer) return
+    let amount = this.ownerAccount.amount - this.transfer.amount
+    if(amount < -500){
+      alert("Account's balance is not enough to perform the transaction")
+      return
+    }
     this.ownerAccount.amount = this.ownerAccount.amount - this.transfer.amount
     this.fromAccountInput.value = `${this.ownerAccount.username} - $${this.ownerAccount.amount}`
     this.onTransfer.emit({toAccount: this.transfer.toAccount, amount: this.transfer.amount})

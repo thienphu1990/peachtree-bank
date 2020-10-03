@@ -18,6 +18,7 @@
 .filter-bound{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: unset;
     grid-column-gap: 30px;
     height: 36px;
     margin-bottom: 25px;
@@ -46,3 +47,13 @@
     flex-direction: column;
     overflow: auto;
 }
+
+@media only screen and (max-width: 1170px) {
+    .filter-bound {
+        grid-template-columns: unset;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        height: 92px;
+    }
+}
+  
